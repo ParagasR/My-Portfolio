@@ -1,0 +1,40 @@
+* { 
+
+}
+
+header {
+    position: relative;
+    height: 200px;
+    background-color: aqua;
+}
+
+header h1 {
+    position: absolute;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%)
+}
+
+nav {
+    background-color: yellow;
+    height: 50px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+li {
+    display: inline;
+    width: 75px;
+    height: 15px;
+    text-align: center;
+}
+
