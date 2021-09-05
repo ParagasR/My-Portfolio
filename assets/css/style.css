@@ -1,7 +1,3 @@
-* {
-    overflow: auto;
-}
-
 body {
     flex-direction: column;
     line-height: 1.3;
@@ -9,6 +5,7 @@ body {
 
 main {
     margin: 0;
+    background-color: plum;
 }
 
 header {
@@ -60,16 +57,57 @@ li {
     display: flex;
     justify-self: end;
     margin: 10px;
-    width: 20vw;
+    width: 22vw;
+    border-right: 5px solid rebeccapurple;
 }
 
 aside h2 {
-    font-size: 150%;
+    font-size: 250%;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .sAbout-me, .sWork, .sContact-me {
     width: 100vw;
     height: fit-content;
+}
+
+.sAbout-me {
+    margin: 10px;
+    
+}
+
+.sAbout-me p {
+    margin: 5px;
+    text-align: center;
+    font-weight: 550;
+}
+
+.card, .main-card {
+    position: relative;
+    margin: 25px;
+    border: 5px solid black;
+    border-radius: 25px;
+    box-shadow: 10px 10px rebeccapurple;
+}
+
+.card h3, .main-card h3 {
+    font-size: 400%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: fit-content;
+    position: absolute;
+}
+
+.main-card {
+    height: 50vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    height: 25vw;
 }
 
 .aContact-me {
@@ -85,6 +123,12 @@ aside h2 {
     height: 15vw;
 }
 
+footer {
+    background-color: plum
+}
+
 footer ul {   
-    justify-content: space-between;   
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-left: 25px;
 }
