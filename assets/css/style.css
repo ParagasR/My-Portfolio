@@ -2,9 +2,9 @@
     --light-purple: plum;
     --purple: rgb(209, 15, 209);
     --dark-purple: rebeccapurple;
-    --card-text-color: rgb(31, 192, 31);
-    --card-glow-start: rgba(27, 236, 19, 0.795);
-    --card-glow-end: rgb(26, 236, 19);
+    --card-text-color: rgb(255, 238, 0);
+    --card-glow-start: rgba(255, 251, 197, 0.75);
+    --card-glow-end: rgb(255, 251, 197);
 }
 
  body {
@@ -47,7 +47,7 @@ ul {
     height: inherit;
 }
 
-a {
+ nav a {
     color: #b9c6ae;
     font-weight: bold;
     text-decoration: none;
@@ -111,18 +111,18 @@ aside h2 {
     width: fit-content;
     position: absolute;
     text-decoration: none;
-    color: green;
+    color: var(--card-text-color);
     animation: glow 1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--card-glow-start), 0 0 30px var(--card-glow-start), 0 0 40px var(--card-glow-start), 
+        text-shadow: 0 0 5px rgb(86, 86, 86), 0 0 10px rgb(86, 86, 86), 0 0 20px var(--card-glow-start), 0 0 30px var(--card-glow-start), 0 0 40px var(--card-glow-start), 
             0 0 50px var(--card-glow-start), 0 0 70px var(--card-glow-start);
     }
 
     to {
-        text-shadow: 0 0 10px #fff, 0 0 20px var(--card-glow-end), 0 0 30px var(--card-glow-end), 0 0 40px var(--card-glow-end), 
+        text-shadow: 0 0 10px rgb(86, 86, 86), 0 0 20px var(--card-glow-end), 0 0 30px var(--card-glow-end), 0 0 40px var(--card-glow-end), 
             0 0 50px var(--card-glow-end), 0 0 60px var(--card-glow-end), 0 0 70px var(--card-glow-end);
     }
 }
