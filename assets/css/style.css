@@ -1,11 +1,20 @@
-body {
+:root {
+    --light-purple: plum;
+    --purple: rgb(209, 15, 209);
+    --dark-purple: rebeccapurple;
+    --card-text-color: rgb(31, 192, 31);
+    --card-glow-start: rgba(27, 236, 19, 0.795);
+    --card-glow-end: rgb(26, 236, 19);
+}
+
+ body {
     flex-direction: column;
     line-height: 1.3;
 }
 
 main {
     margin: 0;
-    background-color: plum;
+    background-color: var(--light-purple);
 }
 
 header {
@@ -24,7 +33,7 @@ header h1 {
 }
 
 nav {
-    background-color: yellow;
+    background-color: var(--purple);
     height: 50px;
 }
 
@@ -58,7 +67,7 @@ li {
     justify-self: end;
     margin: 10px;
     width: 22vw;
-    border-right: 5px solid rebeccapurple;
+    border-right: 5px solid var(--dark-purple);
 }
 
 aside h2 {
@@ -88,7 +97,7 @@ aside h2 {
     margin: 25px;
     border: 5px solid black;
     border-radius: 25px;
-    box-shadow: 10px 10px rebeccapurple;
+    box-shadow: 10px 10px var(--dark-purple);
 }
 
 .card h3, .main-card h3 {
@@ -98,6 +107,21 @@ aside h2 {
     transform: translate(50%, -50%);
     width: fit-content;
     position: absolute;
+    text-decoration: none;
+    color: green;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--card-glow-start), 0 0 30px var(--card-glow-start), 0 0 40px var(--card-glow-start), 
+            0 0 50px var(--card-glow-start), 0 0 70px var(--card-glow-start);
+    }
+
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px var(--card-glow-end), 0 0 30px var(--card-glow-end), 0 0 40px var(--card-glow-end), 
+            0 0 50px var(--card-glow-end), 0 0 60px var(--card-glow-end), 0 0 70px var(--card-glow-end);
+    }
 }
 
 .main-card {
@@ -124,7 +148,7 @@ aside h2 {
 }
 
 footer {
-    background-color: plum
+    background-color: var(--light-purple)
 }
 
 footer ul {   
