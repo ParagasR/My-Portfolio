@@ -7,6 +7,20 @@
     --card-glow-end: rgb(255, 251, 197);
 }
 
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
+  html,body
+  {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden; 
+  }
 
 body {
     flex-direction: column;
@@ -68,8 +82,8 @@ nav li {
 
 .main-aside {
     border-right: 5px solid var(--dark-purple);
-    margin: 10px;
-    width: 22vw;
+    padding-right: 5px;
+    width: 25vw;
 }
 
 aside h2 {
@@ -79,7 +93,7 @@ aside h2 {
 }
 
 .sAbout-me, .sWork, .sContact-me {
-    width: 75vw;
+    width: 70vw;
     height: fit-content;   
 }
 
@@ -158,7 +172,7 @@ aside h2 {
 }
 
 .sContact-me li {
-    margin: 8px;
+    margin: 5px;
 }
 
 @media screen and (min-width: 600px) {
