@@ -19,8 +19,8 @@ main {
 
 header {
     position: relative;
-    height: 200px;
-    background-color: aqua;
+    height: 125px;
+    background-color: var(--light-purple);
 }
 
 header h1 {
@@ -35,7 +35,7 @@ header h1 {
 
 nav {
     background-color: var(--purple);
-    height: 100px;
+    height: 75px;
 }
 
 ul {
@@ -47,16 +47,16 @@ ul {
     height: inherit;
 }
 
- nav a {
-    color: #b9c6ae;
+ a {
+    color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
 nav li {
     margin: 10px;
-    font-size: 200%;
-    color: #b9c6ae;
+    font-size: 115%;
+    color: black;
     width: fit-content;
     text-align: center;
 }
@@ -65,23 +65,21 @@ nav li {
     display: flex;
 }
 
-.aAbout-me, .aWork, .aContact-me  {
-    display: flex;
-    justify-self: end;
+.main-aside {
+    border-right: 5px solid var(--dark-purple);
     margin: 10px;
     width: 22vw;
-    border-right: 5px solid var(--dark-purple);
 }
 
 aside h2 {
-    font-size: 250%;
+    font-size: 125%;
     flex-wrap: wrap;
     text-align: center;
 }
 
 .sAbout-me, .sWork, .sContact-me {
-    width: 100vw;
-    height: fit-content;
+    width: 75vw;
+    height: fit-content;   
 }
 
 .sAbout-me {
@@ -90,26 +88,27 @@ aside h2 {
 }
 
 .sAbout-me p {
-    margin: 5px;
     text-align: center;
     font-weight: 550;
+    color: var(--dark-purple);
 }
 
 .card, .main-card {
-    position: relative;
+    display: flex;
     margin: 25px;
-    border: 5px solid black;
+    border: 5px solid var(--purple);
     border-radius: 25px;
     box-shadow: 10px 10px var(--dark-purple);
+    justify-content: center;
+    align-items: center;
 }
 
 .card h3, .main-card h3 {
-    font-size: 400%;
+    
+    font-size: 150%;
     top: 50%;
     right: 50%;
-    transform: translate(50%, -50%);
     width: fit-content;
-    position: absolute;
     text-decoration: none;
     color: var(--card-text-color);
     animation: glow 1s ease-in-out infinite alternate;
@@ -137,10 +136,6 @@ aside h2 {
     height: 25vw;
 }
 
-.aContact-me {
-    align-items: center;
-}
-
 .sContact-me li {
     align-items: center;
     width: fit-content;
@@ -150,12 +145,81 @@ aside h2 {
     height: 15vw;
 }
 
-footer {
-    background-color: var(--light-purple)
-}
-
-footer ul {   
-    justify-content: space-between;
+.sContact-me ul {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90%;   
+    flex-wrap: wrap;
+    justify-content: center;
     margin-right: 50px;
     margin-left: 25px;
+    
+}
+
+.sContact-me li {
+    margin: 8px;
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    nav li {
+        font-size: 175%;
+    }
+
+    .main-aside {
+        width: 15vw;
+    }
+
+    aside h2 {
+        font-size: 180%;
+    }
+
+    .sAbout-me p {
+        font-size: 150%;
+    }
+
+    .sAbout-me, .sWork {
+        width: 50vw;  
+        margin-left: 10vw;
+        margin-right: 15vw;
+    }
+
+    .card, .main-card {
+        align-items: end;
+        justify-content: start;
+    }
+
+    .card {
+        height: 12vw;
+    }
+
+    .main-card {
+        height: 25vw;
+    }
+
+    .card h3, .main-card h3 {
+        padding: 10px;
+        border: 5px solid var(--purple);
+        background-color: var(--purple);
+        border-radius: 0px 15px 0px 15px;
+        font-size: 250%;
+        
+    }
+
+    .sContact-me ul {
+        font-size: 150%;
+        justify-content: space-between;
+    }
+
+    .main-card:hover, .card:hover {
+        transform: translate(-5px, -5px);
+        box-shadow: 15px 15px var(--dark-purple);
+    }
+
+    li:hover {
+        transform: translate(-2px, -2px);
+    }
 }
