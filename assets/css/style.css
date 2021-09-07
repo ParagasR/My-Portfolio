@@ -13,14 +13,7 @@
     outline: solid #f00 1px !important;
   } */
 
-  html,body
-  {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-      padding: 0px;
-      overflow-x: hidden; 
-  }
+  
 
 body {
     flex-direction: column;
@@ -50,7 +43,7 @@ header h1 {
 
 nav {
     background-color: var(--purple);
-    height: 75px;
+    height: 50px;
 }
 
 ul {
@@ -188,6 +181,10 @@ aside h2 {
         width: 15vw;
     }
 
+    header h1 {
+        font-size: 225%;
+    }
+
     aside h2 {
         font-size: 180%;
     }
@@ -225,13 +222,17 @@ aside h2 {
     }
 
     .sContact-me ul {
-        font-size: 150%;
+        font-size: 200%;
         justify-content: space-between;
     }
 
     .main-card:hover, .card:hover {
         transform: translate(-5px, -5px);
         box-shadow: 15px 15px var(--dark-purple);
+    }
+
+    .sContact-me ul li:nth-child(2) {
+        order: 3;
     }
 
     li:hover {
