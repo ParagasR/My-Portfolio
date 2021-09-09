@@ -1,8 +1,8 @@
 ----------------
-Title: Horiseon
-Description: Horiseon Website Marketing Pitch
+Title: Portfolio
+Description: Ryan's Portfolio
 Readme Author: Ryan Paragas
-Created: 8/23/2021
+Created: 9/8/2021
 ----------------
 
 Ryan's Portfolio
