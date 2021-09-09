@@ -16,8 +16,6 @@
     outline: solid #f00 1px !important;
   } */
 
-  
-
 body {
     /*forces the elements to align themselves vertically in relation to eachother*/
     flex-direction: column;
@@ -30,20 +28,24 @@ main {
 }
 
 header {
-/* by making the position relative, it allows the header to be put in a speciic spot when the page is loaded*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 125px;
     background-color: var(--light-purple);
 }
 
 header h1 {
-    /*This meathod was used to center the h1 tag because I couldn't get the align-items:center to work properly. So an alternate solution was found on stack overflow*/
-    position: absolute;
-    font-size: 150%;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    text-align: center;
 }
+
+header img {
+    margin-right: 15px;
+    width: 20vw;
+    height: 20vw;
+}  
 
 nav {
     background-color: var(--purple);
@@ -196,12 +198,23 @@ footer {
     .contact-me li {
         font-size: 175%;
     }
+
+    header img {
+        width: 15vw;
+        height: 15vw;
+    }  
 }
 
 /*This media query is for the  desktop version*/
 @media only screen and (min-width: 768px) {
     /*I wanted desktop and mobile view to be different from eachother, so there are a few styling differences to differentiate the two. But also taking into account the 
         sizing differences.*/
+
+    header img {
+        width: 10vw;
+        height: 10vw;
+    }      
+
     nav li {
         font-size: 175%;
     }
@@ -240,12 +253,13 @@ footer {
     .card, .main-card {
         align-items: end;
         justify-content: start;
+        /*this needed to be added so that the cards' borders and the tages would align properly and create unwanted white space*/
+        border: 8px solid var(--purple);
     }
 
     .card h3, .main-card h3 {
         border-radius: 0px 15px 0px 15px;
         font-size: 250%;
-        
     }
 
     .sContact-me ul {
